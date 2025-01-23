@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="prism/prism.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <caption>
+        VAR vs LET vs CONST
+      </caption>
+      <thead>
+        <tr>
+          <th class="col-h"></th>
+          <th scope="col" class="col-h">var</th>
+          <th scope="col" class="col-h">let</th>
+          <th scope="col" class="col-h">const</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Stored in Global Scope</th>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+        </tr>
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Function Scope</th>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="check.png" class="right" /></td>
+          <!-- </tr>
+        <tr class="hidden-row">
+          <td colspan="4" class="hidden-cell">
+            <pre><code class='language-css'>p { color: red }</code></pre>
+          </td>
+        </tr> -->
+        </tr>
+
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Block Scope</th>
+          <td><img src="delete.png" class="wrong" /></td>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="check.png" class="right" /></td>
+        </tr>
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Can Be Reassigned?</th>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+        </tr>
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Can be Redeclared?</th>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+        </tr>
+        <tr class="keep-row">
+          <th scope="row" class="row-h">Can Be Hoisted?</th>
+          <td><img src="check.png" class="right" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+          <td><img src="delete.png" class="wrong" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <script type="module" src="examples.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="prism/prism.js"></script>
+  </body>
+</html>
